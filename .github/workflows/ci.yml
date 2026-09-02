@@ -16,4 +16,16 @@ jobs:
       - name: Build Swift package
         run: swift build -c release
       - name: Build Xcode target
-        run: xcodebuild -project TokidachiMac.xcodeproj -scheme TokidachiMac -configuration Release -sdk macosx build CODE_SIGNING_ALLOWED=NO
+        run: xcodebuild -project TokidachiMac.xcodeproj -scheme TokidachiMac -configuration Release -sdk macosx -derivedDataPath "$RUNNER_TEMP/DerivedData" build CODE_SIGNING_ALLOWED=NO
+      - name: Smoke test app bundle
+        shell: bash
+        run: |
+          set -euo pipefail
+          app="$RUNNER_TEMP/DerivedData/Build/Products/Release/TokidachiMac.app"
+          test -d "$app"
+          cleanup() { killall TokidachiMac 2>/dev/null || true; }
+          trap cleanup EXIT
+          open "$app"
+          sleep 5
+          pgrep -f 'TokidachiMac' >/dev/null || { echo 'TokidachiMac did not start' >&2; exit 1; }
+          echo 'TokidachiMac started successfully'

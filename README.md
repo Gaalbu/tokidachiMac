@@ -29,3 +29,10 @@ swift build
 
 The fixture in `Tests/TokidachiMacTests/Fixtures/` mirrors the shared examples
 in `tokidachi/fixtures/collector/` and is used only for offline decoder tests.
+
+## CI smoke test
+
+The macOS workflow opens the built `.app`, verifies that the `TokidachiMac`
+process starts, and terminates it afterward. This covers basic bundle launch
+and clean process shutdown; it does not cover UI appearance, real credentials,
+or production signing and notarization.
