@@ -5,7 +5,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A00000010000000000000001 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000001 /* main.swift */; };
+		A00000010000000000000001 /* TokidachiMacApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000001 /* TokidachiMacApp.swift */; };
 		A00000010000000000000002 /* CollectorContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000002 /* CollectorContract.swift */; };
 		A00000010000000000000003 /* CollectorReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000003 /* CollectorReader.swift */; };
 		A00000010000000000000004 /* DashboardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000110000000000000004 /* DashboardModel.swift */; };
@@ -14,7 +14,7 @@
 
 /* Begin PBXFileReference section */
 		A00000100000000000000000 /* TokidachiMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TokidachiMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A00000110000000000000001 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A00000110000000000000001 /* TokidachiMacApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokidachiMacApp.swift; sourceTree = "<group>"; };
 		A00000110000000000000002 /* CollectorContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorContract.swift; sourceTree = "<group>"; };
 		A00000110000000000000003 /* CollectorReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectorReader.swift; sourceTree = "<group>"; };
 		A00000110000000000000004 /* DashboardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardModel.swift; sourceTree = "<group>"; };
