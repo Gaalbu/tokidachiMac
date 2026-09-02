@@ -1,0 +1,19 @@
+name: macOS
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-and-build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test Swift package
+        run: swift test
+      - name: Build Swift package
+        run: swift build -c release
+      - name: Build Xcode target
+        run: xcodebuild -project TokidachiMac.xcodeproj -scheme TokidachiMac -configuration Release -sdk macosx build CODE_SIGNING_ALLOWED=NO
